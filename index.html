@@ -112,7 +112,7 @@
       const table = document.createElement("table");
       table.className = "table table-bordered mt-3 align-middle";
       const header = document.createElement("thead");
-      header.innerHTML = "<tr><th>#</th><th>英単語</th><th>日本語訳</th><th>操作</th></tr>";
+      header.innerHTML = "<tr><th>#</th><th>英単語</th><th>日本語訳</th><th></th></tr>";
       table.appendChild(header);
 
       const tbody = document.createElement("tbody");
@@ -123,7 +123,7 @@
           <td>${num}</td>
           <td>${q ? q.q : ""}</td>
           <td id="answer-${index}" style="display:none;">${q ? q.a : ""}</td>
-          <td><button class="btn btn-sm btn-outline-primary" onclick="showAnswer(${index})">答えを表示</button></td>
+          <td><button class="btn btn-sm btn-outline-primary" onclick="showAnswer(${index})">答え</button></td>
         `;
         tbody.appendChild(row);
       });
