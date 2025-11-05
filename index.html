@@ -91,7 +91,7 @@
         const variance = b.reduce((s, v) => s + Math.pow(v - mean, 2), 0) / b.length;
         const std = Math.sqrt(variance);
         const hasAllDigits = [...Array(10).keys()].every(d => fe.includes(d));
-        return std >= 30 && hasAllDigits;
+        return hasAllDigits;
       } else {
         return true;
       }
